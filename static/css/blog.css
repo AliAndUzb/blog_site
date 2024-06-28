@@ -1,110 +1,172 @@
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
-    font-family: helvetica, sans-serif;
-    background-color: #2e2e36;
-    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
+/* Links */
 a {
-    color: #00abff;
+    color: #ff5722;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-weight: normal;
-    border-bottom: 1px solid #bbb;
-    padding: 0 0 10px 0;
+    border-bottom: 2px solid #ff5722;
+    padding-bottom: 10px;
 }
 
 h2 {
-    font-weight: normal;
-    margin: 30px 0 0;
-    color: #00abff
+    color: #ff9800;
 }
 
+h3 {
+    color: #ffc107;
+}
+
+/* Content and Sidebar */
 #content {
-    float: left;
-    width: 60%;
-    padding: 0 0 0 30px;
+    width: 65%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #sidebar {
-    float: right;
     width: 30%;
-    padding: 10px;
-    background: #6e6c6c;
-    height: 100%;
-    border-radius: 8px;
+    padding: 20px;
+    background: #2e2e2e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
 }
 
 p.date {
-    color: #73c7c7;
-    font-family: georgia, serif;
-    font-size: 12px;
+    color: #8bc34a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
     font-style: italic;
 }
 
-/* pagination */
+/* Pagination */
 .pagination {
     margin: 40px 0;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* forms */
+.pagination a {
+    color: #03a9f4;
+}
+
+.pagination .current {
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Forms */
 label {
-    float: left;
-    clear: both;
-    color: #333;
-    margin-bottom: 4px;
+    display: block;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 input, textarea {
-    clear: both;
-    float: left;
-    margin: 0 0 10px;
-    background: #ededed;
-    border: 0;
-    padding: 6px 10px;
-    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #2e2e2e;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 input[type=submit] {
     font-weight: bold;
-    background: #00abff;
+    background: #ff5722;
     color: #fff;
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 16px;
     text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background: #ff9800;
 }
 
 .errorlist {
-    color: #cc0033;
-    float: left;
-    clear: both;
+    color: #f44336;
     padding-left: 10px;
 }
 
-/* comments */
+/* Comments */
 .comment {
     padding: 10px;
+    background: #2e2e2e;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
 .comment:nth-child(even) {
-    background: #efefef;
+    background: #3a3a3c;
 }
 
 .comment .info {
     font-weight: bold;
-    font-size: 12px;
-    color: #fc0202;
+    font-size: 14px;
+    color: #ff4081;
 }
+
+/* Posts */
 .post {
-    border: 1px solid #626273;
-    padding: 10px;
-    border-radius: 5px;
-    margin:5px;
+    border: 1px solid #3a3a3c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #1e1e1e;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .post:hover {
-    background-color: #51515b;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #212121;
+    color: #bdbdbd;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #424242;
 }
